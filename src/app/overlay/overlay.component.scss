@@ -1,0 +1,118 @@
+.overlay{
+  padding:50px;
+  .bigcaisse{
+    margin-top:20px;
+    width:300px;
+    p{
+        font-weight:bold;
+        text-align: center;
+    }
+    img{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        margin-top: 15px;
+    }
+    .gains{
+      margin-top:10px;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-evenly;
+    }
+  }
+  .caisses{
+      display:flex;
+      width:300px;
+      margin-top:20px;
+      justify-content: space-around;
+      .caisse{
+          width:60px;
+          p{
+              font-weight:bold;
+              text-align: center;
+          }
+          img{
+              width:100%;
+          }
+          .qte{
+              display:flex;
+              *{
+                  width:33%;
+              }
+          }
+      }
+  }
+  .skins{
+    transform: translateX(0px);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 300px;
+    max-height: 500px;
+    overflow-y: scroll;
+    transition: transform 0.5s ease;
+    .skin{
+      display:flex;
+      justify-content: space-between;
+      img{
+        height:70px;
+      }
+      .fond{
+        height: 3px;
+      }
+    }
+    .stattrak p{
+      color:orange;
+    }
+  }
+}
+.flex{
+  display:flex;
+  p{font-size:12px;}
+}
+
+.hide {
+  transform: translateX(300px)!important;
+}
+
+.title{
+  text-align: center;
+  font-weight:bold;
+  font-size:24px;
+  position: relative;
+  top:10px;
+}
+.grossecaisse{
+  width:60%;
+  display:flex;
+  justify-content: center;
+  margin:auto;
+}
+.hideskin{
+  opacity:0!important;
+}
+.showskin{
+  opacity:1!important;
+}
+.showSkin{
+  pointer-events: none;
+  opacity:0;
+  transition:2s;
+}
+
+
+
+
+.historique{
+  position: absolute;
+  top: 425px;
+  max-height:200px;
+  overflow-y:scroll;
+    div{
+        display:flex;
+        img{
+            height:25px;
+            margin:0px 5px;
+        }
+    }
+}

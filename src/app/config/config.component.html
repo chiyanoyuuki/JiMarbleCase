@@ -1,0 +1,39 @@
+<button class="sauvegarder" (click)="save()" *ngIf="!saved">Sauvegarder</button>
+<p class="sauvegarder" *ngIf="saved">C'est sauvegardé bg <3</p>
+<div class="caisses">
+    <div class="caisse" *ngFor="let caisse of data.caisses;let i=index">
+        <p>{{caisse.case | uppercase}}</p>
+        <p>({{caisse.price}}€)</p>
+        <img src="{{caisse.img}}" class="clickable" (click)="clickCaisse(i)" [class.clicked]="caisse.clicked"/>
+        <div class="qte">
+            <button (click)="addQte(caisse,-1)">-</button>
+            <p>{{getCaisseQte(caisse)}}</p>
+            <button (click)="addQte(caisse,1)">+</button>
+        </div>
+        <div class="stats">
+            <p>Prix Moyen Max : {{getMaxAveragePrice(caisse.skins)}}€</p>
+            <p>Prix Moyen All : {{getGlobalAveragePrice(caisse.skins)}}€</p>
+        </div>
+    </div>
+</div>
+<div class="users">
+    <div *ngFor="let user of data.users" class="user clickable" (click)="selectPlayer(user)" [class.clicked]="user==selectedPlayer">
+        <p>{{user.pseudo}}</p>
+        <p>Fidelité : {{user.points}}</p>
+        <p>Msgs : {{user.msgs?user.msgs:0}}</p>
+        <p>Caisses : {{user.skins?user.skins.length:0}}</p>
+    </div>
+</div>
+<div class="points" *ngIf="selectedPlayer">
+    <p>Fidélité</p>
+    <button (click)="addPoints(1)">+1</button>
+    <button (click)="addPoints(2)">+2</button>
+    <button (click)="addPoints(3)">+3</button>
+    <button (click)="addPoints(5)">+5</button>
+    <button (click)="addPoints(10)">+10</button>
+</div>
+<div class="skins" *ngIf="selectedPlayer&&selectedCaisse">
+    <div *ngFor="let skin of getSkins()" class="skin">
+      <img src="{{skin.img}}" class="clickable" (click)="clickSkin(skin)"/>
+    </div>
+</div>

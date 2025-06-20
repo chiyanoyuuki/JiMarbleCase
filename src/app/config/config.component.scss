@@ -1,0 +1,69 @@
+.caisses{
+    display:flex;
+    width:80%;
+    margin:auto;
+    justify-content: space-between;
+    margin-top:20px;
+    overflow-x:scroll;
+    .caisse{
+        min-width:150px;
+        margin:0px 20px;
+        p{
+            font-weight:bold;
+            text-align: center;
+        }
+        img{
+            height: 90px;
+            display: flex;
+            margin: auto;
+        }
+        .qte{
+            display:flex;
+            *{
+                width:33%;
+            }
+        }
+    }
+}
+.users{
+    margin-top:30px;
+    display:flex;
+    flex-flow: wrap;
+    justify-content: center;
+    .user{
+        border:1px solid #aaa;
+        padding:10px;
+        margin:5px;
+        width:10%;
+        text-align: center;
+    }
+}
+.skins{
+    display: flex;
+  flex-flow: wrap;
+  .skin{
+    width: 10%;
+    img{
+        width:100%;
+    }
+  }
+}
+.points{
+    display:flex;
+    justify-content: space-evenly;
+    *{
+        width:10%
+    }
+}
+
+.sauvegarder{
+    margin:auto;
+    display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  color: white;
+  background-color: red;
+  border-radius: 20px;
+  text-align: center;
+}

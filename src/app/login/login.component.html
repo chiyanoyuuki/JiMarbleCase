@@ -1,0 +1,7 @@
+<div class="login-container" *ngIf="!data.users">
+  <input
+    type="password"
+    [(ngModel)]="password"
+    placeholder="Mot de passe"
+    (keydown.enter)="submitPassword()" />
+</div>

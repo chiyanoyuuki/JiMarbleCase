@@ -1,0 +1,174 @@
+{
+  "users": [
+    {
+      "pseudo": "Cymeriane",
+      "points": 2,
+      "skins": [
+        {
+          "caisse": "recoil",
+          "skin": "Negev | Drop Me",
+          "date": "04/02/2025"
+        },
+        {
+          "caisse": "revolution",
+          "skin": "P250 | Re.built",
+          "date": "04/02/2025"
+        }
+      ]
+    },
+    {
+      "pseudo": "Divagoladiva",
+      "points": 16,
+      "skins": [
+        {
+          "caisse": "recoil",
+          "skin": "R8 Revolver | Crazy 8",
+          "date": "25/03/2025"
+        },
+        {
+          "caisse": "fracture",
+          "skin": "Galil AR | Connexion",
+          "date": "25/03/2025"
+        },
+        {
+          "caisse": "kilowatt",
+          "skin": "Tec-9 | Slag",
+          "date": "25/03/2025"
+        }
+      ]
+    },
+    { "pseudo": "NRV_DARKY", "points": 7 },
+    { "pseudo": "hamtarro", "points": 15 },
+    {
+      "pseudo": "mpouretwitch",
+      "points": 16,
+      "skins": [
+        {
+          "caisse": "recoil",
+          "skin": "UMP-45 | Roadblock",
+          "date": "14/01/2025"
+        },
+        {
+          "caisse": "fracture",
+          "skin": "SG 553 | Ol' Rusty",
+          "date": "14/01/2025"
+        },
+        {
+          "caisse": "dreamsxnightmares",
+          "skin": "MAC-10 | Ensnared",
+          "date": "14/01/2025"
+        },
+        {
+          "caisse": "recoil",
+          "skin": "M249 | Downtown",
+          "date": "28/01/2025"
+        },
+        {
+          "caisse": "fracture",
+          "skin": "P90 | Freight",
+          "date": "11/02/2025"
+        }
+      ]
+    },
+    { "pseudo": "djidivq", "points": 10 },
+    {
+      "pseudo": "touristix",
+      "points": 5,
+      "skins": [
+        {
+          "caisse": "fracture",
+          "skin": "M4A4 | Tooth Fairy",
+          "date": "18/02/2025"
+        },
+        {
+          "caisse": "recoil",
+          "skin": "M4A4 | Poly Mag",
+          "date": "25/02/2025"
+        },
+        {
+          "caisse": "recoil",
+          "skin": "Negev | Drop Me",
+          "date": "04/03/2025"
+        },
+        {
+          "caisse": "fracture",
+          "skin": "P90 | Freight",
+          "date": "11/03/2025"
+        }
+      ]
+    },
+    { "pseudo": "psykoqlq", "points": 10 },
+    { "pseudo": "betadev", "points": 1 },
+    { "pseudo": "arma_cos", "points": 2 },
+    { "pseudo": "im_zygo", "points": 1 },
+    { "pseudo": "LYXII", "points": 1 },
+    { "pseudo": "cookie", "points": 1 },
+    { "pseudo": "clutshy", "points": 2 },
+    { "pseudo": "liorr233", "points": 2 },
+    {
+      "pseudo": "profox76fr",
+      "points": 0,
+      "skins": [
+        {
+          "caisse": "recoil",
+          "skin": "MAC-10 | Monkeyflage",
+          "date": "21/01/2025"
+        }
+      ]
+    },
+    {
+      "pseudo": "victorlacastor",
+      "points": 0,
+      "skins": [
+        {
+          "caisse": "recoil",
+          "skin": "Negev | Drop Me",
+          "date": "07/01/2025"
+        },
+        {
+          "caisse": "recoil",
+          "skin": "R8 Revolver | Crazy 8",
+          "date": "07/01/2025"
+        },
+        {
+          "caisse": "kilowatt",
+          "skin": "Dual Berettas | Hideout",
+          "date": "07/01/2025"
+        }
+      ]
+    },
+    {
+      "pseudo": "WolfiToner",
+      "points": 0,
+      "skins": [
+        {
+          "caisse": "recoil",
+          "skin": "MAC-10 | Monkeyflage",
+          "date": "18/03/2025"
+        },
+        {
+          "caisse": "kilowatt",
+          "skin": "SSG 08 | Dezastre",
+          "date": "18/03/2025"
+        }
+      ]
+    },
+    {
+      "pseudo": "solene2935",
+      "points": 0,
+      "skins": [
+        {
+          "caisse": "fracture",
+          "skin": "M4A4 | Tooth Fairy",
+          "date": "01/04/2025"
+        },
+        {
+          "caisse": "fever",
+          "skin": "M4A4 | Choppa",
+          "date": "01/04/2025"
+        }
+      ]
+    }
+  ],
+  "historique": []
+}
