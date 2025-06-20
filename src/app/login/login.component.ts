@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           if(res.data)
           {
             this.data.users = res.data;
-            this.data.historique = {};
+            this.data.historique = [];
 
             this.data.users = this.data.users.sort((a:any,b:any)=>{return a.pseudo.localeCompare(b.pseudo)});
 
