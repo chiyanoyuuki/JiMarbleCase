@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
               this.data.caisses = this.caisses;
 
               this.authService.setUserData(this.data);
-              window.open('/overlay', '_blank', 'width=800,height=600');
+              window.open((isDevMode()?'/JiMarbleCase':'')+'/overlay', '_blank', 'width=800,height=600');
               this.router.navigate(['/config']);
             });
             
