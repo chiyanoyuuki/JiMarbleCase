@@ -7,5 +7,6 @@ import { LoginComponent } from './login/login.component';
 export const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'config', component: ConfigComponent },
-  { path: 'overlay', component: OverlayComponent }
+  { path: 'overlay', component: OverlayComponent },
+  { path: 'JiMarbleCase/overlay', component: OverlayComponent }
 ];
