@@ -16,6 +16,12 @@ import { SkinService } from './services/skin.service';
 })
 export class AppComponent {
   skins: any[] = [];
-  constructor() {}
+  constructor(private router: Router) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirect = urlParams.get('redirect');
+    if (redirect) {
+      this.router.navigateByUrl(redirect);
+    }
+  }
   ngOnInit() {}
 }
