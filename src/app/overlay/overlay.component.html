@@ -2,6 +2,8 @@
   <div class="bigcaisse">
     <p>Ce soir, déjà {{getNumberOfCases()}} caisses !</p>
     <p>+1 caisse par abonnement !</p>
+    <p>Jusqu'à la fin de la marble race !</p>
+    <p>!play dans le chat pour participer !</p>
     <img src="caisse.png">
     <div class="gains">
       <p *ngFor="let winner of distributeStrictlyDecreasing();let i=index">&nbsp;{{(i+1)}}{{i==0?'er':'eme'}} : {{winner}}&nbsp;</p>
@@ -14,9 +16,9 @@
     </div>
   </div>
 
-  <div class="skins" [class.hide]="!show" >
-    <p class="title" *ngIf="data.caisses && getCaisseClicked()">{{getCaisseClicked().case | uppercase}}</p>
-    <img class="grossecaisse" src="{{getCaisseClicked().img}}" *ngIf="data.caisses && getCaisseClicked()"/>
+  <div class="skins" [class.hide]="!show" *ngIf="data.caisses && caisseClicked">
+    <p class="title" >{{caisseClicked.case | uppercase}}</p>
+    <img class="grossecaisse" src="{{caisseClicked.img}}" *ngIf="data.caisses && caisseClicked"/>
     <div *ngFor="let skin of getSkins()" class="skin">
       <div>
         <div class="fond" [style.background-color]="getRarityColor(skin.rarity)"></div>
@@ -29,8 +31,20 @@
     </div>
   </div>
 
-  <div class="historique">
-    <div *ngFor="let histo of data.historique">
+  <div class="skins user" [class.hide]="!show" *ngIf="data.users && !caisseClicked && userClicked">
+    <p class="title" >{{userClicked.pseudo}}</p>
+    <div *ngFor="let skin of userClicked.skins" class="skin">
+      <div>
+        <p>{{skin.skin}}</p>
+        <img src="{{getSkinImg(skin)}}" />
+        <p>{{getSkinPrice(skin)}}</p>
+      </div>
+      <img src="{{skin.img}}"/>
+    </div>
+  </div>
+
+  <div class="historique" *ngIf="data.historique&&data.historique.length>0">
+    <div *ngFor="let histo of data.historique.slice().reverse()">
       <p>{{histo.user}}</p>
       <img src="{{histo.img}}" />
       <p>{{histo.price}}</p>

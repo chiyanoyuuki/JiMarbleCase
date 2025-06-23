@@ -13,6 +13,8 @@ import { TwitchChatService } from '../services/twitch-chat.service';
 })
 export class OverlayComponent implements OnInit {
   data: any = {};
+  userClicked:any;
+  caisseClicked:any;
 
   private rarityColors: any = {
     'Consumer':'blue',
@@ -33,30 +35,17 @@ export class OverlayComponent implements OnInit {
     const bc = new BroadcastChannel('overlay-channel');
     bc.onmessage = (event) => {
       this.data = event.data;
-      this.getClicked();
+      this.userClicked = this.data.users.find((user:any)=>user.clicked);
+      this.caisseClicked = this.data.caisses.find((caisse:any)=>caisse.clicked);
+      if(this.userClicked || this.caisseClicked) this.show = true;
+      else this.show = false;
       this.cdr.detectChanges();
     };
   }
 
-  getCaisseClicked(){
-    let caisse = this.data.caisses.find((caisse:any)=>caisse.clicked);
-    return caisse;
-  }
-
-  getClicked()
-  {
-    let caisse = this.data.caisses.find((caisse:any)=>caisse.clicked);
-    if(caisse) this.show = true;
-    else this.show = false;
-  }
-
   getSkins()
   {
-    if(!this.data.caisses)return;
-    let skins: any = [];
-    const caisse = this.data.caisses.find((caisse:any)=>caisse.clicked);
-    if(caisse) skins = caisse.skins;
-    return skins;
+    return this.caisseClicked?this.caisseClicked.skins:[];
   }
 
   getRarityColor(rarity: string | undefined): string {
@@ -106,5 +95,27 @@ export class OverlayComponent implements OnInit {
   getCaisses()
   {
     return this.data.caisses?this.data.caisses.filter((caisse:any)=>caisse.qte>0):[];
+  }
+
+  getSkinImg(skin:any)
+  {
+    let caisse = this.data.caisses.find((caisse:any)=>caisse.case==skin.caisse);
+    if(caisse)
+    {
+      let s = caisse.skins.find((sk:any)=>sk.name == skin.skin);
+      if(s) return s.img;
+    }
+    return "";
+  }
+
+  getSkinPrice(skin:any)
+  {
+    let caisse = this.data.caisses.find((caisse:any)=>caisse.case==skin.caisse);
+    if(caisse)
+    {
+      let s = caisse.skins.find((sk:any)=>sk.name == skin.skin);
+      if(s) return s.prices[0];
+    }
+    return "NA";
   }
 }

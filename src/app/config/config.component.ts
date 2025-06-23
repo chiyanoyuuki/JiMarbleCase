@@ -87,7 +87,20 @@ formatDate(date: Date): string {
 
   selectPlayer(user:any)
   {
-    this.selectedPlayer = user;
+    if(this.selectedPlayer==user)
+    {
+      user.clicked = false;
+      this.selectedPlayer=undefined;
+    }
+    else 
+    {
+      user.clicked = true;
+      if(this.selectedPlayer)
+        this.data.users.find((u:any)=>u.pseudo==this.selectedPlayer.pseudo).clicked = false;
+      this.selectedPlayer = user;
+    }
+
+    this.updateOverlay();
   }
 
   addQte(caisse:any, qte:number)
@@ -194,5 +207,24 @@ formatDate(date: Date): string {
         this.saved = true;
       })
     );
+  }
+
+  retour()
+  {
+    
+    //this.data.historique.push({user:this.selectedPlayer.pseudo,img:skin.img,price:skin.prices[0]});
+    let last = this.data.historique.pop();
+    let user = this.data.users.find((u:any)=>u.pseudo==last.user);
+    if(last.img=="twitch.png")
+    {
+      user.points -= last.price.replace(/[^0-9]/g,"");
+    }
+    else
+    {
+      let skin = user.skins.pop();
+      let caisse = this.data.caisses.find((caisse:any)=>caisse.case==skin.caisse);
+      caisse.opened --;
+    }
+    this.updateOverlay();
   }
 }

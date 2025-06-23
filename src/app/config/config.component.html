@@ -1,4 +1,7 @@
-<button class="sauvegarder" (click)="save()" *ngIf="!saved">Sauvegarder</button>
+<div class="boutons" *ngIf="data">
+    <button class="sauvegarder retour" (click)="retour()" *ngIf="data.historique.length>0">Ctrl+Z</button>
+    <button class="sauvegarder" (click)="save()" *ngIf="!saved&&data.historique.length>0">Sauvegarder</button>
+</div>
 <p class="sauvegarder" *ngIf="saved">C'est sauvegardé bg <3</p>
 <div class="caisses">
     <div class="caisse" *ngFor="let caisse of data.caisses;let i=index">

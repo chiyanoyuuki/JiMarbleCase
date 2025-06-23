@@ -116,3 +116,15 @@
         }
     }
 }
+
+.user{
+  display: flex;
+  flex-flow: wrap;
+  .title{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .skin{
+    margin: 10px auto;
+  }
+}

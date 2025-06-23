@@ -56,14 +56,22 @@
     }
 }
 
-.sauvegarder{
-    margin:auto;
-    display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  color: white;
-  background-color: red;
-  border-radius: 20px;
-  text-align: center;
+.boutons{
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    button{
+        padding: 10px 20px;
+        color: white;
+        border-radius: 20px;
+        text-align: center;
+        margin: 0px 20px;
+    }
+    .sauvegarder{
+        background-color: red;
+    }
+    .retour{
+        background-color: #555;
+    }
 }
