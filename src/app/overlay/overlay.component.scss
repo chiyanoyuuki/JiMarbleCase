@@ -127,4 +127,14 @@
   .skin{
     margin: 10px auto;
   }
+  .between{
+    width: 100%;
+    padding: 10px;
+  }
+}
+.flex{
+  display:flex;
+}
+.between{
+  justify-content: space-between;
 }

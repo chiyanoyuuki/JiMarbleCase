@@ -33,9 +33,14 @@
 
   <div class="skins user" [class.hide]="!show" *ngIf="data.users && !caisseClicked && userClicked">
     <p class="title" >{{userClicked.pseudo}}</p>
+    <div class="flex between">
+      <p>{{userClicked.msgs?userClicked.msgs:0}} messages</p>
+      <p>Fidélité : {{userClicked.points}}</p>
+    </div>
     <div *ngFor="let skin of userClicked.skins" class="skin">
       <div>
         <p>{{skin.skin}}</p>
+        <p>{{skin.date}}</p>
         <img src="{{getSkinImg(skin)}}" />
         <p>{{getSkinPrice(skin)}}</p>
       </div>
